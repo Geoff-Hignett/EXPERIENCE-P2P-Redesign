@@ -1,0 +1,202 @@
+:root {
+  --background: rgba(0, 214, 170, .85);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: #222;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+.content {
+  height: 200vh;
+  background-image: url(//unsplash.it/1000/1000);
+  background-color: #333;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+/* navigation styles start here */
+
+.navbar {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.navbar__toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.navbar__toggle-label {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  margin-left: 1em;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  transition: all .5s ease-in-out;
+}
+
+.navbar__toggle-label:hover {
+ cursor: pointer;
+}
+
+.navbar__hamburger,
+.navbar__hamburger::before,
+.navbar__hamburger::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+  transition: all .5s ease-in-out;
+}
+
+/* Animation */
+.navbar__toggle-label.open .navbar__hamburger {
+	transform: translateX(-50px);
+	background: transparent;
+}
+
+.navbar__toggle-label.open .navbar__hamburger::before {
+	    transform: rotate(45deg) translate(32px, -39px);
+}
+
+.navbar__toggle-label.open .navbar__hamburger::after {
+	    transform: rotate(-45deg) translate(30px, 41px);
+}
+
+.navbar__hamburger::before,
+.navbar__hamburger::after {
+  content: '';
+  position: absolute;
+}
+
+.navbar__hamburger::before {
+  top: 7px;
+}
+
+.navbar__hamburger::after {
+	top: -7px;
+}
+
+.navbar__nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+}
+
+.navbar__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__item{
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.navbar__link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.navbar__nav a:hover {
+  color: #000;
+}
+
+.navbar__toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.navbar__toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .navbar__toggle-label {
+    display: none;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .navbar__logo {
+    grid-column: 2 / 3;
+  }
+
+  .navbar__nav {
+    // all: unset; /* this causes issues with Edge, since it's unsupported */
+
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navbar__items {
+    display: flex;
+  }
+
+  .navbar__item{
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  .navbar__link {
+    opacity: 1;
+    position: relative;
+  }
+
+  .navbar__link::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  .navbar__link:hover::before {
+    transform: scale(1,1);
+  }
+}
