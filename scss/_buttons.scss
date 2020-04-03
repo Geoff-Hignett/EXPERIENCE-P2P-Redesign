@@ -1,0 +1,36 @@
+.btn {
+	color: #fff;
+	width: 170px;
+	height: 60px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+
+	&--green {
+		background-color: var(--green);
+		transition: all 0.8s ease 0s;
+
+		&:hover {
+			background: none;
+			transition: all 0.8s ease 0s;
+			border: 2px solid #fff;
+		}
+	}
+
+	&--white-outline {
+		border: 2px solid #fff;
+		transition: all 0.8s ease 0s;
+
+		&:hover {
+			background: var(--green);
+			transition: all 0.8s ease 0s;
+			border: none;
+		}
+	}
+
+	&--blue {
+		background-color: var(--blue);
+	}
+}

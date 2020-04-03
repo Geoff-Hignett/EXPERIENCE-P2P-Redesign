@@ -1,0 +1,20 @@
+.section {
+	padding: 100px 0px;
+
+	&--grey {
+		background-color: var(--grey);
+	}
+
+	&__intro {
+		text-align: center;
+	}
+
+	&__header {
+		margin-bottom: 15px;
+	}
+
+	&__description {
+		max-width: 700px;
+		margin: 0 auto 60px;
+	}
+}

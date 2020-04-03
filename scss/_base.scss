@@ -1,3 +1,17 @@
-* {
+*, *::before, *::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+// variables
+:root {
+	--green: #29ca8a;
+	--blue: #051be5;
+	--grey: #f7f7f7;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 }

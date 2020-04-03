@@ -1,3 +1,44 @@
 .hero {
-	background-image: url('img/homeHero.jpg');
+	background-image: url("../../img/home-hero.jpg");
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__content {
+		max-width: 740px;
+		color: #fff;
+	}
+
+	&__description {
+		margin: 0 auto;
+		max-width: 670px;
+		text-align: center;
+	}
+
+	&__ctas {
+		display: flex;
+		max-width: 380px;
+		margin: 20px auto 0px;
+		justify-content: space-between;
+	}
+}
+
+.about-us {
+	&__two-column {
+		display: flex;
+	}
+
+	&__left {
+		width: 60%;
+		padding-right: 40px;
+		margin-top: 40px;
+		margin-bottom: 43px;
+	}
+
+	&__right-image {
+		position: absolute;
+	}
 }
