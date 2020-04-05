@@ -1,11 +1,9 @@
 .btn {
+	@include full-flex-center;
 	color: #fff;
 	width: 170px;
 	height: 60px;
 	border-radius: 8px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	text-decoration: none;
 
 	&--green {

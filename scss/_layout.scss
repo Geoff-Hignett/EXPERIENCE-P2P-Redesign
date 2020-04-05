@@ -1,5 +1,14 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 .section {
 	padding: 100px 0px;
+
+	&--padding-small {
+		padding: 80px 0px;
+	}
 
 	&--grey {
 		background-color: var(--grey);

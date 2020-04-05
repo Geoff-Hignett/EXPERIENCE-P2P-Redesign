@@ -11,7 +11,10 @@
 	--grey: #f7f7f7;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
+
+// mixins
+@mixin full-flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

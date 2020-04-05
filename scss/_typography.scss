@@ -31,13 +31,25 @@ p {
 	margin-bottom: 20px;
 }
 
-.hero {
-	&__header {
-		text-transform: uppercase;
-	}
+.caps {
+	text-transform: uppercase;
+}
 
+.hero {
 	&__description {
 		font-size: 20px;
 		line-height: 34px;
+	}
+}
+
+.stats-banner {
+	&__number,
+	&__before-number {
+		line-height: 36px;
+	}
+
+	&__after,
+	&__before {
+		font-size: 24px;
 	}
 }
