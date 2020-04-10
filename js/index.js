@@ -1,8 +1,9 @@
+// hamburger
 const hamburger = document.querySelector('.navbar__toggle-label');
 let hamburgerOpen = false;
 
 hamburger.addEventListener('click', () => {
-	if(!hamburgerOpen){
+	if (!hamburgerOpen) {
 		hamburger.classList.add('open');
 		hamburgerOpen = true;
 	} else {
@@ -11,7 +12,26 @@ hamburger.addEventListener('click', () => {
 	}
 });
 
-$( document ).ready(function() {
+
+// stats counter
+const statsCount = document.querySelector('.stats-banner');
+
+const config = {
+  threshold: 0.8
+};
+
+observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      countUp();
+    }
+  });
+}, config);
+
+observer.observe(statsCount);
+
+function countUp() {
+
 	$counters = $('.count-up');
 
 	$counters.each((index, el) => {
@@ -26,22 +46,37 @@ $( document ).ready(function() {
 			countTo = $counter.attr('data-to');
 			time = parseInt($counter.attr('data-time'));
 
-			$({countNum: "0"}).animate({
-					countNum: countTo
+			$({
+				countNum: "0"
+			}).animate({
+				countNum: countTo
+			}, {
+				duration: time,
+				easing: 'linear',
+				step: function() {
+					$counter.text(new Number(this.countNum).toLocaleString('en-GB', {
+						maximumFractionDigits: 0
+					}));
 				},
-				{
-					duration: time,
-					easing: 'linear',
-					step: function () {
-						$counter.text(new Number(this.countNum).toLocaleString('en-GB', {maximumFractionDigits: 0}));
-					},
-					complete: function () {
-						$counter.text(new Number(this.countNum).toLocaleString('en-GB', {maximumFractionDigits: 0}));
-					}
+				complete: function() {
+					$counter.text(new Number(this.countNum).toLocaleString('en-GB', {
+						maximumFractionDigits: 0
+					}));
+				}
 
-				});
+			});
 			$counter.addClass('count-done');
 		}
 	})
+}
 
+// slick slider
+$('.our-reviews__reviews').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  dots: true,
+  arrows: false,
+  autoplaySpeed: 4000
 });

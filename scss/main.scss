@@ -1,8 +1,12 @@
 @import 'base.scss';
 @import 'typography.scss';
-@import 'navigation.scss';
-@import 'buttons.scss';
 @import 'layout.scss';
-@import 'our-services.scss';
+
+
+@import 'modules/our-services.scss';
 
 @import 'pages/home.scss';
+
+@import 'components/buttons.scss';
+@import 'components/footer.scss';
+@import 'components/header.scss';

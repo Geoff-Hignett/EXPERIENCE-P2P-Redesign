@@ -1,26 +1,31 @@
 .hero {
-	@include full-flex-center;
 	background-image: url("../../img/home-hero.jpg");
 	height: 100vh;
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
 
 	&__content {
 		max-width: 740px;
 		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	&__description {
 		margin: 0 auto;
 		max-width: 670px;
 		text-align: center;
+		font-size: 20px;
+		line-height: 34px;
 	}
 
 	&__ctas {
-		display: flex;
+		@include flex-space-between;
 		max-width: 380px;
 		margin: 20px auto 0;
-		justify-content: space-between;
 	}
 }
 
@@ -63,18 +68,48 @@
 	}
 
 	&__number-wrapper {
-		@include full-flex-center;
+		@include flex-center;
 	}
 
 	&__above-number {
 		margin-bottom: 12px;
 	}
 
+	&__number,
+	&__before-number,
 	&__after-number {
-		position: relative;
-		left: 7px;
 		font-size: 48px;
 		line-height: 36px;
 	}
 
+	&__after,
+	&__before {
+		font-size: 24px;
+	}
+}
+
+.our-reviews {
+
+	&__reviews {
+		display: flex;
+	}
+
+	&__title {
+		margin: 10px 0;
+	}
+
+	&__description {
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		color: var(--blue);
+		text-decoration: none;
+		font-weight: 500;
+		position: relative;
+	}
+
+	ul.slick-dots {
+		bottom: -50px;
+	}
 }

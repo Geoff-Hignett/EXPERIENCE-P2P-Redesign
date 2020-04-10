@@ -1,0 +1,41 @@
+.footer {
+	background-color: var(--dark-blue);
+	color: #fff;
+
+	&__columns {
+		@include flex-space-between;
+		margin-top: 10px;
+	}
+
+	&__column {
+		width: 22%;
+	}
+
+	&__logo {
+		margin-top: 5px;
+	}
+
+	p {
+		line-height: 28px;
+	}
+
+	&__subheader {
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+	}
+
+	&__column--alternate p {
+		margin-bottom: 0;
+	}
+
+	&__links {
+		list-style: none;
+	}
+
+	&__link {
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+}

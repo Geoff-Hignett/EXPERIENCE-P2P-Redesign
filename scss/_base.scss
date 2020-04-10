@@ -8,13 +8,19 @@
 :root {
 	--green: #29ca8a;
 	--blue: #051be5;
+	--dark-blue: #18172c;
 	--grey: #f7f7f7;
 }
 
 
 // mixins
-@mixin full-flex-center {
+@mixin flex-center {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@mixin flex-space-between {
+	display: flex;
+	justify-content: space-between;
 }

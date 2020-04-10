@@ -8,27 +8,31 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<title>EXPERIENCE P2P</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+	<link rel="stylesheet" type="text/css" href="	https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+
 
 </head>
 
 <body>
-	<header class="navbar">
-		<img src="../../img/logo.png" class="navbar__logo" alt="">
-		<input id="nav-toggle" class="navbar__toggle" type="checkbox">
-		<nav class="navbar__nav">
-			<ul class="navbar__items">
-				<li class="navbar__item"><a class="navbar__link" href="#">Home</a></li>
-				<li class="navbar__item"><a class="navbar__link" href="#">About</a></li>
-				<li class="navbar__item"><a class="navbar__link" href="#">Blog</a></li>
-				<li class="navbar__item"><a class="navbar__link" href="#">Contact</a></li>
-			</ul>
-		</nav>
-		<label class="navbar__toggle-label" for="nav-toggle">
-			<span class="navbar__hamburger"></span>
-		</label>
-	</header>
+
 
 	<section class="hero">
+		<header class="navbar">
+			<img src="../../img/logo.png" class="navbar__logo" alt="Experience P2P Logo">
+			<input id="nav-toggle" class="navbar__toggle" type="checkbox">
+			<nav class="navbar__nav">
+				<ul class="navbar__items">
+					<li class="navbar__item"><a class="navbar__link" href="#">Home</a></li>
+					<li class="navbar__item"><a class="navbar__link" href="#">About</a></li>
+					<li class="navbar__item"><a class="navbar__link" href="#">Blog</a></li>
+					<li class="navbar__item"><a class="navbar__link" href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<label class="navbar__toggle-label" for="nav-toggle">
+				<span class="navbar__hamburger"></span>
+			</label>
+		</header>
 		<div class="hero__content">
 			<h1 class="hero__header caps">We are experience p2p</h1>
 			<p class="hero__description">EXPERIENCE P2P is a UK-based, informative website for newcomers to peer-to-peer lending and anyone interested in alternative investment strategies.</p>
@@ -42,9 +46,9 @@
 	<section class="section about-us">
 		<div class="container">
 
-			<div class="about-us__intro section__intro">
-				<h3 class="about-us__header section__header">About Us</h3>
-				<p class="about-us__description section__description">Based in the United Kingdom, we are an informative provider of peer-to-peer lending news and advice.</p>
+			<div class="section__intro">
+				<h3 class="section__header">About Us</h3>
+				<p class="section__description">Based in the United Kingdom, we are an informative provider of peer-to-peer lending news and advice.</p>
 			</div>
 			<div class="about-us__two-column">
 				<div class="about-us__left">
@@ -67,9 +71,9 @@
 	<section class="section section--grey our-services">
 		<div class="container">
 
-			<div class="our-services__intro section__intro">
-				<h3 class="our-services__header section__header">Our Services</h3>
-				<p class="our-services__description section__description">These are the steps we take to make the investment decision easy for others.</p>
+			<div class="section__intro">
+				<h3 class="section__header">Our Services</h3>
+				<p class="section__description">These are the steps we take to make the investment decision easy for others.</p>
 			</div>
 
 			<div class="tabbed-content">
@@ -141,7 +145,7 @@
 						<img class="stats-banner__icon" src="img/man.png" alt="">
 						<p class="stats-banner__above-number">over</p>
 						<div class="stats-banner__number-wrapper">
-							<h2 class="stats-banner__number count-up" data-to="65" data-time="1000"></h2><span class="stats-banner__after-number"></span>
+							<h2 class="stats-banner__number count-up" data-to="65" data-time="1200"></h2><span class="stats-banner__after-number"></span>
 						</div>
 						<h5 class="stats-banner__text">Providers</h5>
 					</div>
@@ -150,7 +154,7 @@
 						<p class="stats-banner__above-number">over</p>
 
 						<div class="stats-banner__number-wrapper">
-							<h2 class="stats-banner__number count-up" data-to="90000" data-time="1000"></h2><span class="stats-banner__after-number"></span>
+							<h2 class="stats-banner__number count-up" data-to="90000" data-time="1200"></h2><span class="stats-banner__after-number"></span>
 						</div>
 						<h5 class="stats-banner__text">Investors</h5>
 					</div>
@@ -159,7 +163,7 @@
 						<p class="stats-banner__above-number">up to</p>
 
 						<div class="stats-banner__number-wrapper">
-							<h2 class="stats-banner__number count-up" data-to="15" data-time="1000"></h2><span class="stats-banner__after-number">%</span>
+							<h2 class="stats-banner__number count-up" data-to="15" data-time="1200"></h2><span class="stats-banner__after-number">%</span>
 						</div>
 						<h5 class="stats-banner__text">Returns</h5>
 					</div>
@@ -168,7 +172,8 @@
 						<p class="stats-banner__above-number">up to</p>
 
 						<div class="stats-banner__number-wrapper">
-							£<h2 class="stats-banner__number count-up" data-to="250" data-time="1000"></h2><span class="stats-banner__after-number"></span>
+							<span class="stats-banner__before-number">£</span>
+							<h2 class="stats-banner__number count-up" data-to="250" data-time="1200"></h2><span class="stats-banner__after-number"></span>
 						</div>
 						<h5 class="stats-banner__text">Welcome Bonus</h5>
 					</div>
@@ -176,7 +181,83 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="section our-reviews">
+		<div class="container">
+			<div class="section__intro">
+				<h3 class="section__header">Our Reviews</h3>
+				<p class="section__description">Click on one of the reviews below to get the lowdown on the biggest names in P2P.</p>
+			</div>
+			<div class="our-reviews__reviews">
+				<div class="our-reviews__review">
+					<img src="img/first.jpg" alt="">
+					<h5 class="our-reviews__title">Ratesetter</h5>
+					<p class="our-reviews__description">First few words of the review of this provider ew words of the review of thi</p>
+					<a class="our-reviews__link" href="">Read More >></a>
+				</div>
+				<div class="our-reviews__review">
+					<img src="img/first.jpg" alt="">
+					<h5 class="our-reviews__title">Ratesetter</h5>
+					<p class="our-reviews__description">First few words of the review of this provider ew words of the review of thi</p>
+					<a class="our-reviews__link" href="">Read More >></a>
+				</div>
+				<div class="our-reviews__review">
+					<img src="img/first.jpg" alt="">
+					<h5 class="our-reviews__title">Ratesetter</h5>
+					<p class="our-reviews__description">First few words of the review of this provider ew words of the review of thi</p>
+					<a class="our-reviews__link" href="">Read More >></a>
+				</div>
+				<div class="our-reviews__review">
+					<img src="img/first.jpg" alt="">
+					<h5 class="our-reviews__title">Ratesetter</h5>
+					<p class="our-reviews__description">First few words of the review of this provider ew words of the review of thi</p>
+					<a class="our-reviews__link" href="">Read More >></a>
+				</div>
+				<div class="our-reviews__review">
+					<img src="img/first.jpg" alt="">
+					<h5 class="our-reviews__title">Ratesetter</h5>
+					<p class="our-reviews__description">First few words of the review of this provider ew words of the review of thi</p>
+					<a class="our-reviews__link" href="">Read More >></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="section footer">
+		<div class="container">
+			<div class="footer__columns">
+				<div class="footer__column">
+					<img class="footer__logo" src="img/logo-footer.png" alt="">
+
+				</div>
+				<div class="footer__column">
+					<h6 class="footer__subheader">Mission</h6>
+
+					<p class="tiny">Providing investors with invaluable knowledge about P2P opportunities in the UK.</p>
+				</div>
+				<div class="footer__column footer__column--alternate">
+					<h6 class="footer__subheader">Contact Us</h6>
+					<p class="tiny">Address: St Peter's Street, Bedford</p>
+					<p class="tiny">MK40 2PN</p>
+					<p class="tiny">Email: contact@experiencep2p.co.uk</p>
+				</div>
+				<div class="footer__column footer__column--alternate">
+					<h6 class="footer__subheader">Website</h6>
+				<ul class="footer__links">
+					<li><a class="footer__link" href="#">Home</a></li>
+					<li><a class="footer__link" href="#">About</a></li>
+					<li><a class="footer__link" href="#">Reviews</a></li>
+					<li><a class="footer__link" href="#">Contact</a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/index.js"></script>
 </body>
 
