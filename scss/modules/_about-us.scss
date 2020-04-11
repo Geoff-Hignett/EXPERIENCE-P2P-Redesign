@@ -1,0 +1,51 @@
+.about-us {
+	&__two-column {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__left {
+		margin-top: 40px;
+		margin-bottom: 43px;
+	}
+
+	&__right-image {
+		width: 100%;
+		max-width: 700px;
+	}
+
+	@media (min-width: 768px) {
+
+		&__right {
+			margin: 0 auto;
+		}
+
+		&__right-image {
+			max-width: 700px;
+		}
+	}
+
+	@media (min-width: 1740px) {
+
+		&__two-column {
+			flex-direction: row;
+		}
+
+		&__left {
+			width: 60%;
+			padding-right: 40px;
+		}
+
+		&__right {
+			position: relative;
+		}
+
+		&__right-image {
+			position: absolute;
+			top: 0px;
+			left: -223px;
+			width: auto;
+			max-width: none;
+		}
+	}
+}

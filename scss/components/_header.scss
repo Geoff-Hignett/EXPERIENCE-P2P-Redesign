@@ -1,8 +1,11 @@
 .navbar {
-  text-align: center;
+  // text-align: center;
   z-index: 999;
   width: 100%;
-  padding: 10px 0px;
+  padding: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .navbar__toggle {
@@ -14,8 +17,9 @@
 .navbar__toggle-label {
   position: absolute;
   top: 28px;
-  left: 0;
-  margin-left: 1em;
+  // left: 0;
+  right: 10px;
+  // margin-right: 1em;
   height: 30%;
   display: flex;
   align-items: center;
@@ -49,7 +53,7 @@
 }
 
 .navbar__toggle-label.open .navbar__hamburger::after {
-	    transform: rotate(-45deg) translate(30px, 41px);
+	    transform: rotate(-45deg) translate(30px, 42px);
 }
 
 .navbar__hamburger::before,
@@ -68,10 +72,11 @@
 
 .navbar__nav {
   position: absolute;
-  text-align: left;
+  text-align: right;
   top: 100%;
   left: 0;
   width: 100%;
+  padding-right: 5px;
 }
 
 .navbar__items {
@@ -103,7 +108,7 @@
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .navbar__toggle-label {
     display: none;
   }

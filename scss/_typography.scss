@@ -4,7 +4,8 @@ body {
 }
 
 h1 {
-	font-size: 60px;
+	font-size: 45px;
+	line-height: 56px;
 	color: #fff;
 }
 
@@ -40,8 +41,9 @@ p {
 	text-transform: uppercase;
 }
 
-.hero {
-	&__description {
-
+@media (min-width: 375px) {
+	h1 {
+		font-size: 60px;
+		line-height: 82px;
 	}
 }

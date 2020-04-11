@@ -1,0 +1,58 @@
+.hero {
+	background-image: url("../../img/home-hero.jpg");
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	&__content {
+		color: #fff;
+		text-align: center;
+		transform: translateY(0px);
+		transition: all 1s ease;
+		padding: 0px 10px;
+	}
+
+	&__content.open {
+		transform: translateY(180px);
+	}
+
+	&__description {
+		text-align: center;
+		font-size: 18px;
+		line-height: 31px;
+	}
+
+	&__ctas {
+		display: flex;
+		justify-content: space-evenly;
+		margin: 20px auto 0;
+	}
+
+	@media (min-width: 375px) {
+		&__description {
+			text-align: center;
+			font-size: 20px;
+			line-height: 34px;
+			padding: 20px 0px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		justify-content: center;
+
+		&__content {
+			max-width: 640px;
+		}
+
+		&__content.open {
+			transform: translateY(0px);
+		}
+
+		&__ctas {
+			max-width: 440px;
+		}
+	}
+}

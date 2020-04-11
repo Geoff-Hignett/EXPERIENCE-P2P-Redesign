@@ -1,0 +1,57 @@
+.in-numbers {
+	background-image: url("../../img/p2p-facts-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+
+	&__header {
+		margin-bottom: 50px;
+	}
+
+	&__stats {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	&__stat {
+		margin-bottom: 50px;
+	}
+
+	div.in-numbers__stat:nth-of-type(4) {
+		margin-bottom: 0px;
+	}
+
+	&__icon {
+		font-size: 60px;
+		height: 62px;
+	}
+
+	&__number-wrapper {
+		@include flex-center;
+	}
+
+	&__above-number {
+		margin-bottom: 12px;
+	}
+
+	&__number,
+	&__before-number,
+	&__after-number {
+		font-size: 48px;
+		line-height: 36px;
+	}
+
+	&__after,
+	&__before {
+		font-size: 24px;
+	}
+
+	@media (min-width: 480px) {
+		&__stats {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+	}
+}
