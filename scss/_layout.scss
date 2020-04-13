@@ -6,6 +6,10 @@
 .section {
 	padding: 80px 30px;
 
+	&--horizontal-padding-small {
+		padding: 80px 20px;
+	}
+
 	&--grey {
 		background-color: var(--grey);
 	}
@@ -19,8 +23,14 @@
 	}
 
 	&__description {
-		margin: 0 auto 20px;
+		margin: 0 auto 50px;
+
+		&--mb-small {
+				margin: 0 auto 10px;
+		}
 	}
+
+
 	@media (min-width: 768px) {
 		&__description {
 			max-width: 550px;
@@ -29,8 +39,6 @@
 	@media (min-width: 1440px) {
 		padding: 100px 0;
 
-		&__description {
-			margin: 0 auto 60px;
-		}
+
 	}
 }

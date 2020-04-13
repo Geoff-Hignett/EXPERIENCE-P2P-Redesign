@@ -48,10 +48,9 @@
 		font-size: 24px;
 	}
 
-	@media (min-width: 480px) {
+	@media (min-width: 768px) {
 		&__stats {
 			flex-direction: row;
-			justify-content: space-around;
 		}
 	}
 }

@@ -4,11 +4,18 @@
 
 	&__columns {
 		@include flex-space-between;
+		flex-direction: column;
+		// flex-direction: column;
 		margin-top: 10px;
 	}
 
 	&__column {
-		width: 22%;
+		// width: 22%;
+		margin-bottom: 40px;
+	}
+
+	div.footer__column:nth-of-type(4) {
+		margin-bottom: 0;
 	}
 
 	&__logo {
@@ -37,5 +44,46 @@
 		text-transform: uppercase;
 		text-decoration: none;
 	}
+
+@media (min-width: 768px) {
+	&__columns {
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 10px;
+	}
+
+	&__column {
+		width: 33%;
+
+		&--logo {
+			width: 100%;
+		}
+
+		&--website {
+			width: 21%;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	&__columns {
+		flex-wrap: nowrap;
+	}
+
+	&__column {
+		width: 22%;
+
+		&--contact {
+			width: 25%;
+		}
+
+		&--website {
+			width: 20%;
+		}
+	}
+}
+
+
+
 
 }

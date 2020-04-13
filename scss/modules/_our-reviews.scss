@@ -1,0 +1,38 @@
+
+
+.our-reviews {
+
+	&__reviews {
+		display: flex;
+	}
+
+	&__title {
+		margin: 10px 0;
+	}
+
+	&__description {
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		color: var(--blue);
+		text-decoration: none;
+		font-weight: 500;
+		position: relative;
+	}
+
+	ul.slick-dots {
+		bottom: -50px;
+	}
+
+	@media (min-width: 768px) {
+		&__review {
+			width: 95% !important;
+		}
+
+		&__image {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}

@@ -84,5 +84,13 @@ $('.our-reviews__reviews').slick({
   autoplay: true,
   dots: true,
   arrows: false,
-  autoplaySpeed: 4000
+  autoplaySpeed: 40000,
+  responsive: [
+  {
+	breakpoint: 768,
+	settings: {
+		slidesToShow: 1
+	}
+  },
+]
 });
