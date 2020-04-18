@@ -5,12 +5,10 @@
 	&__columns {
 		@include flex-space-between;
 		flex-direction: column;
-		// flex-direction: column;
 		margin-top: 10px;
 	}
 
 	&__column {
-		// width: 22%;
 		margin-bottom: 40px;
 	}
 

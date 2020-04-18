@@ -234,38 +234,45 @@ p {
     justify-content: space-between;
     margin-right: 35px; } }
 
-.about-us__two-column {
+.two-column {
   display: flex;
   flex-direction: column; }
-
-.about-us__left {
-  margin-top: 40px;
-  margin-bottom: 43px; }
-
-.about-us__right-image {
-  width: 100%;
-  max-width: 700px; }
-
-@media (min-width: 768px) {
-  .about-us__right {
-    margin: 0 auto; }
-  .about-us__right-image {
-    max-width: 700px; } }
-
-@media (min-width: 1740px) {
-  .about-us__two-column {
-    flex-direction: row; }
-  .about-us__left {
-    width: 60%;
-    padding-right: 40px; }
-  .about-us__right {
-    position: relative; }
-  .about-us__right-image {
-    position: absolute;
-    top: 0px;
-    left: -223px;
-    width: auto;
-    max-width: none; } }
+  .two-column__left {
+    margin-top: 40px;
+    margin-bottom: 43px; }
+  .two-column__image {
+    width: 100%;
+    max-width: 700px; }
+  .two-column--reverse {
+    flex-direction: column-reverse; }
+  @media (min-width: 768px) {
+    .two-column__right {
+      margin: 0 auto; }
+    .two-column__image {
+      max-width: 700px; }
+    .two-column--reverse .two-column__left {
+      margin: 0 auto; } }
+  @media (min-width: 1740px) {
+    .two-column {
+      flex-direction: row; }
+      .two-column__left {
+        width: 60%;
+        padding-right: 40px; }
+      .two-column__right {
+        position: relative; }
+      .two-column__image {
+        position: absolute;
+        top: 0px;
+        left: -223px;
+        width: auto;
+        max-width: none; }
+      .two-column--reverse .two-column__left {
+        position: relative;
+        width: 171%;
+        padding-right: 0; }
+      .two-column--reverse .two-column__image {
+        right: 70px;
+        left: auto; } }
 
 .hero {
   background-image: url("../../img/home-hero.jpg");
@@ -275,12 +282,23 @@ p {
   position: relative;
   display: flex;
   align-items: center; }
+  .hero--about {
+    background-image: url("../../img/about-hero.jpg"); }
+  .hero--small {
+    display: block;
+    height: 50vh; }
+    .hero--small > .container {
+      display: flex;
+      align-items: center;
+      height: 100%; }
   .hero__content {
     color: #fff;
     text-align: center;
     transform: translateY(0px);
     transition: all 1s ease;
     padding: 0px 10px; }
+    .hero__content--small {
+      text-align: left; }
   .hero__content.open {
     transform: translateY(180px); }
   .hero__description {
@@ -537,11 +555,8 @@ p {
 @media screen and (min-width: 1024px) {
   .navbar__toggle-label {
     display: none; }
-  .navbar {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr; }
-  .navbar__logo {
-    grid-column: 2 / 3; }
+  .navbar .container {
+    display: flex; }
   .navbar__nav {
     /* the following lines are not from my video, but add Edge support */
     position: relative;

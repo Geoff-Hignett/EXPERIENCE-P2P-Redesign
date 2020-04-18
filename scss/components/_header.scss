@@ -1,5 +1,4 @@
 .navbar {
-  // text-align: center;
   z-index: 999;
   width: 100%;
   padding: 10px;
@@ -17,9 +16,7 @@
 .navbar__toggle-label {
   position: absolute;
   top: 28px;
-  // left: 0;
   right: 10px;
-  // margin-right: 1em;
   height: 30%;
   display: flex;
   align-items: center;
@@ -113,13 +110,8 @@
     display: none;
   }
 
-  .navbar {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-  }
-
-  .navbar__logo {
-    grid-column: 2 / 3;
+  .navbar .container {
+      display: flex;
   }
 
   .navbar__nav {

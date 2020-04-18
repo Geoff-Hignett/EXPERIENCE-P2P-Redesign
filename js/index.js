@@ -23,7 +23,7 @@ hamburger.addEventListener('click', () => {
 const statsCount = document.querySelector('.in-numbers');
 
 const config = {
-  threshold: 0.8
+  threshold: 0.75
 };
 
 observer = new IntersectionObserver((entries) => {

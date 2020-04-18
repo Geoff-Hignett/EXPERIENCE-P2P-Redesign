@@ -7,12 +7,31 @@
 	display: flex;
 	align-items: center;
 
+	&--about {
+		background-image: url("../../img/about-hero.jpg");
+	}
+
+	&--small {
+		display: block;
+		height: 50vh;
+
+		& > .container {
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+	}
+
 	&__content {
 		color: #fff;
 		text-align: center;
 		transform: translateY(0px);
 		transition: all 1s ease;
 		padding: 0px 10px;
+
+		&--small {
+			text-align: left;
+		}
 	}
 
 	&__content.open {
