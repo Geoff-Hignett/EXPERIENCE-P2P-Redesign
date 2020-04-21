@@ -29,6 +29,10 @@
 		&--reverse .two-column__left {
 			margin: 0 auto;
 		}
+
+		&--reverse .two-column__right {
+			margin-bottom: 40px;
+		}
 	}
 
 	@media (min-width: 1740px) {
@@ -62,6 +66,10 @@
 		&--reverse .two-column__image {
 			right: 70px;
 			left: auto;
+		}
+
+		&--reverse .two-column__right {
+			margin: 40px auto;
 		}
 	}
 

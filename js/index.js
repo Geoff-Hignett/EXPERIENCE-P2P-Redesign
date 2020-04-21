@@ -34,7 +34,9 @@ observer = new IntersectionObserver((entries) => {
   });
 }, config);
 
-observer.observe(statsCount);
+if(statsCount){
+	observer.observe(statsCount);
+}
 
 function countUp() {
 
@@ -84,7 +86,7 @@ $('.our-reviews__reviews').slick({
   autoplay: true,
   dots: true,
   arrows: false,
-  autoplaySpeed: 40000,
+  autoplaySpeed: 4000,
   responsive: [
   {
 	breakpoint: 768,
@@ -94,3 +96,14 @@ $('.our-reviews__reviews').slick({
   },
 ]
 });
+
+// faqs accordion__button
+const accordions = document.querySelectorAll('.accordion__button');
+for(let i = 0; i < accordions.length; i++) {
+	accordions[i].onclick = function() {
+		this.classList.toggle('is-open');
+		const content = this.nextElementSibling;
+		content.style.maxHeight ?
+		content.style.maxHeight = null : content.style.maxHeight = content.scrollHeight + "px";
+	}
+}
