@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
 
 // compile scss into css
 function style() {
@@ -16,6 +18,17 @@ function style() {
 		.pipe(browserSync.stream());
 }
 
+// concat js
+function javascript(){
+// gulp.task('javascript', function() {
+  return gulp.src('./js/**/*.js')
+    .pipe(sourcemaps.init())
+      .pipe(concat('script.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./dist/'));
+// });
+}
+
 function watch() {
 	browserSync.init({
 		server: {
@@ -24,7 +37,7 @@ function watch() {
 	});
 	gulp.watch('./scss/**/*.scss', style);
 	gulp.watch('./*html').on('change', browserSync.reload);
-	gulp.watch('./js/**/*.js').on('change', browserSync.reload);
+	gulp.watch('./js/**/*.js').on('change', javascript);
 }
 
 exports.style = style;
