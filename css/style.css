@@ -285,15 +285,37 @@ p {
 
 .three-column__columns {
   display: flex;
-  justify-content: space-between; }
+  flex-direction: column; }
 
 .three-column__column {
-  width: 32%; }
+  margin-bottom: 50px; }
+
+.three-column__column {
+  margin-bottom: 50px; }
 
 .three-column__card {
-  border: 2px solid #f3f3f3;
   margin-bottom: 25px;
-  padding: 30px 25px 40px 30px; }
+  padding: 30px 25px 20px 30px;
+  -webkit-box-shadow: 0 0 10px 5px #bebebe;
+  -moz-box-shadow: 0 0 10px 5px #bebebe;
+  box-shadow: 0 0 10px 5px #bebebe;
+  position: relative; }
+
+.three-column__card::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background-color: var(--green);
+  width: 100%;
+  bottom: -2px;
+  left: 0; }
+
+.three-column__header {
+  margin-bottom: 20px;
+  max-width: 362px; }
+
+.three-column__paragraph {
+  margin-bottom: 35px; }
 
 .hero {
   background-image: url("../../img/home-hero.jpg");
