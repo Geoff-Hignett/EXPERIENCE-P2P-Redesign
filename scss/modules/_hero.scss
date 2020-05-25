@@ -46,7 +46,7 @@
 
 	&__ctas {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		margin: 20px auto 0;
 	}
 
@@ -71,7 +71,7 @@
 		}
 
 		&__ctas {
-			max-width: 440px;
+			max-width: 374px;
 		}
 	}
 }

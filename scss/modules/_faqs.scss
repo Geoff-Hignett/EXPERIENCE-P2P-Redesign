@@ -1,9 +1,10 @@
 .accordion__wrapper {
 	background-color: var(--dark-blue);
 	background-color: #fff;
-	padding: 50px 100px;
 	max-width: 940px;
 	margin: 0 auto;
+	padding: 20px;
+	padding-bottom: 35px;
 }
 
 .accordion__button {
@@ -19,6 +20,9 @@
 	transition: background-color 0.2s linear;
 	border-bottom: 2px solid var(--blue);
 	padding-left: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .accordion__button.is-open {
@@ -31,8 +35,8 @@
 	content: '\f055';
 	font-family: 'fontawesome';
 	font-size: 14px;
-	float: right;
 	color: var(--blue);
+	margin-top: 4px;
 }
 
 .accordion__button.is-open::after {
@@ -44,4 +48,14 @@
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-in-out;
+}
+
+.accordion__content p {
+	margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+	.accordion__wrapper {
+	padding: 50px 100px;
+}
 }

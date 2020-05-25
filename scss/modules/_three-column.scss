@@ -8,20 +8,18 @@
 
 	&__column {
 		// width: 31%;
-		margin-bottom: 50px;
 	}
-	
-	&__column {
-		// width: 31%;
+
+	div:first-of-type.three-column__column {
 		margin-bottom: 50px;
 	}
 
 	&__card {
-		margin-bottom: 25px;
+		margin-bottom: 35px;
 		padding: 30px 25px 20px 30px;
-		-webkit-box-shadow: 0 0 10px 5px rgba(190,190,190,1);
-		-moz-box-shadow: 0 0 10px 5px rgba(190,190,190,1);
-		box-shadow: 0 0 10px 5px rgba(190,190,190,1);
+		-webkit-box-shadow: 0 0 10px 3px rgba(190,190,190,1);
+		-moz-box-shadow: 0 0 10px 3px rgba(190,190,190,1);
+		box-shadow: 0 0 10px 3px rgba(190,190,190,1);
 		position: relative;
 	}
 
@@ -37,10 +35,40 @@
 
 	&__header {
 		margin-bottom: 20px;
-		max-width: 362px;
+		// max-width: 362px;
 	}
 
 	&__paragraph {
 		margin-bottom: 35px;
+	}
+
+	@media (min-width: 768px) {
+		&__column--flex {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__card {
+			width: 48%;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		&__columns {
+			justify-content: space-between;
+			flex-direction: row;
+		}
+
+		div:first-of-type.three-column__column {
+			width: 680px;
+		}
+
+		&__column--flex {
+			display: block;
+		}
+
+		&__card {
+			width: 90%;
+		}
 	}
 }

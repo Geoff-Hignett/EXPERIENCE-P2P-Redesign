@@ -22,15 +22,12 @@
 
 	p {
 		line-height: 28px;
+		margin-bottom: 0px;
 	}
 
 	&__subheader {
 		text-transform: uppercase;
 		letter-spacing: 1.4px;
-	}
-
-	&__column--alternate p {
-		margin-bottom: 0;
 	}
 
 	&__links {
@@ -52,9 +49,11 @@
 
 	&__column {
 		width: 33%;
+		margin-bottom: 0px;
 
 		&--logo {
 			width: 100%;
+			margin-bottom: 40px;
 		}
 
 		&--website {
