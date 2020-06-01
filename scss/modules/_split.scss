@@ -1,0 +1,27 @@
+.split {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__left--mb-mobile {
+        margin-bottom: 50px;
+    }
+
+    &__image {
+        width: 95%;
+    }
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__left {
+            width: 50%;
+            margin-bottom: 0;
+        }
+
+        &__right {
+            width: 50%;
+        }
+    }
+}

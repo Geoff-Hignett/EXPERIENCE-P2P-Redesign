@@ -93,6 +93,10 @@ p {
     .section {
       padding: 100px 0; } }
 
+@media (max-width: 768px) {
+  .mb-sm-0 {
+    margin-bottom: 0 !important; } }
+
 .tabbed-content {
   display: flex;
   flex-direction: column; }
@@ -347,6 +351,8 @@ p {
   align-items: center; }
   .hero--about {
     background-image: url("../../img/about-hero.jpg"); }
+  .hero--reviews {
+    background-image: url("../../img/reviews-hero.jpg"); }
   .hero--small {
     display: block;
     height: 50vh; }
@@ -425,6 +431,19 @@ p {
 .our-reviews__reviews {
   display: flex; }
 
+.our-reviews__title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.our-reviews__title-container p {
+  margin-top: 22px; }
+
+.our-reviews__calendar {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 20px; }
+
 .our-reviews__title {
   margin: 10px 0; }
 
@@ -437,15 +456,37 @@ p {
   font-weight: 500;
   position: relative; }
 
+.our-reviews__review-link {
+  color: #000;
+  text-decoration: none; }
+
 .our-reviews ul.slick-dots {
   bottom: -50px; }
 
 @media (min-width: 768px) {
   .our-reviews__review {
+    max-width: 570px; }
+  .our-reviews__review--reduced {
     width: 95% !important; }
   .our-reviews__image {
     width: 100%;
     object-fit: cover; } }
+
+.reviews-lozenges .our-reviews__description {
+  margin-bottom: 80px; }
+
+.reviews-lozenges .our-reviews__image {
+  width: 100%; }
+
+.reviews-lozenges .our-reviews__review {
+  margin: 0 auto; }
+
+.reviews-lozenges .our-reviews__calendar {
+  display: none; }
+
+@media (min-width: 375px) {
+  .reviews-lozenges .our-reviews__calendar {
+    display: block; } }
 
 .accordion__wrapper {
   background-color: var(--dark-blue);
@@ -499,6 +540,24 @@ p {
 @media (min-width: 1024px) {
   .accordion__wrapper {
     padding: 50px 100px; } }
+
+.split {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .split__left--mb-mobile {
+    margin-bottom: 50px; }
+  .split__image {
+    width: 95%; }
+  @media (min-width: 1024px) {
+    .split {
+      flex-direction: row;
+      justify-content: space-between; }
+      .split__left {
+        width: 50%;
+        margin-bottom: 0; }
+      .split__right {
+        width: 50%; } }
 
 .btn {
   display: flex;
