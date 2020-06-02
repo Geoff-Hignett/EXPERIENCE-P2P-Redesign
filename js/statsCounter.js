@@ -1,58 +1,53 @@
-// stats counter
-const statsCount = document.querySelector('.in-numbers');
 
-const config = {
-  threshold: 0.75
-};
+$(window).on('scroll', function (){
+    const scrollTop = $(window).scrollTop();
+    const scrollBottom = scrollTop + $(window).height();
+    const counterTop = $('.count-start').offset().top;
+    const counterBottom = counterTop + $('.count-start').height();
+    const offset = 20;
 
-observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      countUp();
+    if(scrollBottom > counterBottom + offset) {
+        countUp();
     }
-  });
-}, config);
 
-if(statsCount){
-	observer.observe(statsCount);
-}
+})
+
 
 function countUp() {
 
-	$counters = $('.count-up');
+    $counters = $('.count-up');
+    $counters.each((index, el) => {
+        let $counter, countTo, time;
 
-	$counters.each((index, el) => {
-		let $counter, countTo, time;
+        $counter = $(el);
 
-		$counter = $(el);
+        // If has not fired
+        if (!$counter.hasClass('count-done')) {
+            $counter.html("0");
 
-		// If has not fired and on screen
-		if (!$counter.hasClass('count-done')) {
-			$counter.html("0");
+            countTo = $counter.attr('data-to');
+            time = parseInt($counter.attr('data-time'));
 
-			countTo = $counter.attr('data-to');
-			time = parseInt($counter.attr('data-time'));
+            $({
+                countNum: "0"
+            }).animate({
+                countNum: countTo
+            }, {
+                duration: time,
+                easing: 'linear',
+                step: function() {
+                    $counter.text(new Number(this.countNum).toLocaleString('en-GB', {
+                        maximumFractionDigits: 0
+                    }));
+                },
+                complete: function() {
+                    $counter.text(new Number(this.countNum).toLocaleString('en-GB', {
+                        maximumFractionDigits: 0
+                    }));
+                }
 
-			$({
-				countNum: "0"
-			}).animate({
-				countNum: countTo
-			}, {
-				duration: time,
-				easing: 'linear',
-				step: function() {
-					$counter.text(new Number(this.countNum).toLocaleString('en-GB', {
-						maximumFractionDigits: 0
-					}));
-				},
-				complete: function() {
-					$counter.text(new Number(this.countNum).toLocaleString('en-GB', {
-						maximumFractionDigits: 0
-					}));
-				}
-
-			});
-			$counter.addClass('count-done');
-		}
-	})
+            });
+            $counter.addClass('count-done');
+        }
+    })
 }

@@ -8,7 +8,7 @@
     }
 
     &__image {
-        width: 95%;
+        width: 100%;
     }
 
     @media (min-width: 1024px) {
@@ -22,6 +22,10 @@
 
         &__right {
             width: 50%;
+        }
+
+        &__image {
+            width: 95%;
         }
     }
 }

@@ -1,0 +1,13 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    &__item {
+        padding: 20px;
+        margin-bottom: 32px;
+        border-radius: 8px;
+        border: 1.5px solid #eaeaea;
+        font-family: 'Poppins', sans-serif;
+    }
+}

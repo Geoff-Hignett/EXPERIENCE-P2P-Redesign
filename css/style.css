@@ -353,6 +353,8 @@ p {
     background-image: url("../../img/about-hero.jpg"); }
   .hero--reviews {
     background-image: url("../../img/reviews-hero.jpg"); }
+  .hero--contact {
+    background-image: url("../../img/contact-hero.jpg"); }
   .hero--small {
     display: block;
     height: 50vh; }
@@ -479,7 +481,44 @@ p {
   width: 100%; }
 
 .reviews-lozenges .our-reviews__review {
-  margin: 0 auto; }
+  margin: 0 auto;
+  visibility: hidden; }
+
+.reviews-lozenges .our-reviews__image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.reviews-lozenges .our-reviews__image-wrapper:hover .our-reviews__overlay {
+  opacity: 0.7; }
+
+.reviews-lozenges .our-reviews__image-wrapper:hover .our-reviews__overlay-text {
+  opacity: 1; }
+
+.reviews-lozenges .our-reviews__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #051be5;
+  opacity: 0;
+  transition: opacity 0.8s ease; }
+
+.reviews-lozenges .our-reviews__overlay-text {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.8s ease;
+  border: 2px solid #fff;
+  padding: 20px;
+  color: #fff; }
 
 .reviews-lozenges .our-reviews__calendar {
   display: none; }
@@ -487,6 +526,21 @@ p {
 @media (min-width: 375px) {
   .reviews-lozenges .our-reviews__calendar {
     display: block; } }
+
+@media (min-width: 1024px) {
+  .reviews-lozenges .our-reviews__review {
+    width: 95%; } }
+
+.fade-in {
+  -webkit-animation: animate_show 0.8s;
+  animation: animate_show 0.8s;
+  visibility: visible !important; }
+
+@-webkit-keyframes animate_show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .accordion__wrapper {
   background-color: var(--dark-blue);
@@ -548,7 +602,7 @@ p {
   .split__left--mb-mobile {
     margin-bottom: 50px; }
   .split__image {
-    width: 95%; }
+    width: 100%; }
   @media (min-width: 1024px) {
     .split {
       flex-direction: row;
@@ -557,7 +611,20 @@ p {
         width: 50%;
         margin-bottom: 0; }
       .split__right {
-        width: 50%; } }
+        width: 50%; }
+      .split__image {
+        width: 95%; } }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 90%; }
+  .contact__item {
+    padding: 20px;
+    margin-bottom: 32px;
+    border-radius: 8px;
+    border: 1.5px solid #eaeaea;
+    font-family: 'Poppins', sans-serif; }
 
 .btn {
   display: flex;
